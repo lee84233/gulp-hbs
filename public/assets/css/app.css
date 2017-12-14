@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*引入变量*/
+/*主色调*/
+/*背景颜色*/
+/*默认字体*/
+/*字体颜色*/
+/*常用颜色*/
+/*边框颜色*/
+/**
+ * 按钮
+ * button.scss
+ */
+/**
+ * 表格
+ * table.scss
+ */
+/**
+ * 间距
+ * marginPadding.scss
+ */
+/**
+ * 滚动条
+ * reset.scss
+ */
+/*设置行高和行间距*/
+/*过渡效果*/
+/*在此写你的项目scss*/
+.main-container {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 600px;
+  padding-left: 200px;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+
+.main-container .main-container_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: auto;
+  width: 200px;
+  height: 100%;
+  background-color: #096;
+  overflow-y: auto;
+}
+
+.main-container .main-container_right {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: burlywood;
+}

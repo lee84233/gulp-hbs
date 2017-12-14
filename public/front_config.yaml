@@ -1,0 +1,95 @@
+app: demo-bridge
+
+components:
+  "header": # component path     修改角色     已通
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "页面头部"
+    desc: "页面头部" # 可选
+  "footer": # component path     修改角色     已通
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "页面尾部"
+    desc: "页面尾部" # 可选
+  "menu": # component path     修改角色     已通
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "菜单"
+    desc: "菜单" # 可选
+ 
+  "search_hac_app1": # component path     应用查询
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "应用查询"
+    service: "aixforce690-showcase:searchHacAppSpecialService" # app:serviceKey
+    desc: "应用查询" # 可选
+  "update_hac_app": # component path   
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "应用修改"
+    service: "aixforce690-showcase:getHacAppByIdService" # app:serviceKey
+    desc: "应用修改" # 可选
+  "create_hac_app": # component path     修改角色     已通
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "应用新增"
+    desc: "应用新增" # 可选
+  "noAuth": # component path     无权限跳转页面
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "noAuth"
+    #service: "aixforce690-showcase:searchHacUserService" # app:serviceKey
+    desc: "noAuth" # 可选
+
+  "chart": # component path     修改角色     已通
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "chart"
+    desc: "chart" # 可选
+  "pie": # component path     修改角色     已通
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "pie"
+    desc: "pie" # 可选
+  "search": # component path     修改角色     已通
+    category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+    name: "search"
+    desc: "search" # 可选    
+  "login": # component path     修改角色     已通
+      category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+      name: "login"
+      desc: "login" # 可选
+      
+  "search": # component path     修改角色     已通
+      category: "OFFICIAL" # category: OFFICIAL, TEMPLATE, SHOP, ITEM, ITEM_TEMPLATE
+      name: "login"
+      service: "aixforce690-showcase:searchIndex" # app:serviceKey
+      desc: "login" # 可选
+
+mappings:
+
+  - pattern: "api/createHacApp"
+    methods:
+      - GET
+    service: "aixforce690-showcase:createHacAppService"
+    desc: "应用新增" # 可选
+  - pattern: "api/searchHacApp"
+    methods:
+      - GET
+    service: "aixforce690-showcase:getHacAppByIdService"
+    desc: "应用修改查询动作" # 可选
+  - pattern: "api/updateHacApp"
+    methods:
+      - GET
+    service: "aixforce690-showcase:updateHacAppService"
+    desc: "应用修改" # 可选
+  - pattern: "api/deleteHacApp"
+    methods:
+      - GET
+    service: "aixforce690-showcase:delHacAppService"
+    desc: "应用删除" # 可选
+
+auths:
+  # protectedList:
+  #   - pattern: "/api/buyer/.*" # 正则表达式
+  #     roles:
+  #       - ADMIN_ROLE
+  #       - BUYER_ROLE
+  # whiteList:
+  #   - pattern: "*" # 正则表达式
+  #     methods: # methods 多选: ALL, GET, POST, HEAD, OPTIONS, PUT, PATCH, DELETE, TRACE
+  #       - ALL
+
+
+

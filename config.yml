@@ -1,0 +1,64 @@
+paths:
+  public: "public"
+groups:
+  scripts:
+    paths:
+      - app/scripts
+      - vendor
+    concat:
+      "/assets/scripts/config.js": "app/components/**/config.{js,coffee}"
+      "/assets/scripts/app.js": "{app/scripts/**/*.{js,coffee},app/components/**/view.{js,coffee}}"
+      "/assets/scripts/vendor.js": "vendor/*.{js,coffee}"
+    copy:
+      "/assets/scripts": "{vendor/eevee/*.js,vendor/*.js}"
+    order:
+      - "..."
+      - "app/scripts/app.coffee"
+    ignored: vendor/jquery-1.10.2.js,vendor/jquery.cookie.js,vendor/jquery.keyboard.extension-typing.js,vendor/jquery.keyboard.js,vendor/jquery-ui-1.10.4.custom.min.js
+  styles:
+    paths:
+      - app/styles
+      - vendor
+    concat:
+      "/assets/styles/vendor.css": "vendor/*.{css,scss,sass}"
+      "/assets/styles/app.css": "{app/styles/app.{scss,sass},app/components/**/view.{scss,sass}}"
+    copy:
+      "/assets/styles": "{vendor/eevee/*.css,vendor/essage.css,vendor/*.css}"
+  images:
+    paths:
+      - app/images
+      - app/standalone_images
+    sprite:
+      "../app/styles/icons.scss": "app/images/**/*.png"
+    copy:
+      "/assets/images": "app/standalone_images/**/*"
+  views:
+    paths:
+      - app/views
+    copy:
+      "/views": "app/views/**/*.hbs"
+      "/components/": "app/components/**/view.hbs"
+  templates:
+    paths:
+      - "app/components"
+    precompile:
+      "../vendor/templates.js": "app/components/**/templates/*.hbs"
+  files:
+    paths:
+      - "app/files"
+    copy:
+      "/": "app/files/**/*.yaml"
+modules:
+  wrapper: cmd
+  ignored: vendor/**/*
+  definition: /assets/scripts/app.js
+sprites:
+  url: /images/
+  path: /images/
+  selector: .icons-
+revision: layout.hbs
+notification: true
+bundles:
+  bootstrap.css:
+    version: 2.2.2
+    url: http://xiemin.me/bootstrap-2.2.2/assets/css/bootstrap.css

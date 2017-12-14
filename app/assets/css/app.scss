@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/*引入变量*/
+@import "scss/variable";
+
+
+/*在此写你的项目scss*/
+.main-container{
+	position:relative;
+	box-sizing:border-box;
+	width:100%;
+	height:600px;
+	padding-left:200px;
+	overflow:hidden;
+	background-color:#f8f8f8;
+	.main-container_left{
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:auto;
+		width:200px;
+		height:100%;
+		background-color:#096;
+		overflow-y:auto;
+	}
+	.main-container_right{
+		width:100%;
+		height:100%;
+		overflow-y:auto;
+		background-color:burlywood;
+	}
+}

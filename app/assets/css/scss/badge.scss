@@ -1,0 +1,28 @@
+
+.lc-badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #999999;
+  border-radius: 0;
+}
+
+.lc-badge-info {
+  background-color: $info;
+}
+.lc-badge-success {
+  background-color: $success;
+}
+.lc-badge-warning {
+  background-color: $warning;
+}
+.lc-badge-danger {
+  background-color: $danger;
+}

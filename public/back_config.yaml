@@ -1,0 +1,29 @@
+app: demo-bridge
+
+services:
+
+  "searchHacAppSpecialService":
+    app: hac1169     #查询应用带淘宝查询    没写
+    uri: "com.haier.openplatform.hac.service.agent.HacAppServiceClient:searchAppSpecial"
+
+  "searchHacAppService":
+    app: hac1169     #查询应用    没写
+    uri: "com.haier.openplatform.hac.service.agent.HacAppServiceClient:searchApp"
+  "createHacAppService":
+    app: hac1169    #应用新增
+    uri: "com.haier.openplatform.hac.service.agent.HacAppServiceClient:createHacApp"
+
+  "getHacAppByIdService":
+    app: hac1169    #应用新增
+    uri: "com.haier.openplatform.hac.service.agent.HacAppServiceClient:getHacAppById"
+
+  "updateHacAppService":
+    app: hac1169    #应用新增
+    uri: "com.haier.openplatform.hac.service.agent.HacAppServiceClient:updateHacApp"
+
+  "delHacAppService":
+    app: hac1169    #应用删除
+    uri: "com.haier.openplatform.hac.service.agent.HacAppServiceClient:deleteHacAppByUserId"
+  "searchIndex":
+    app: monitor4.0    #应用删除
+    uri: "com.haier.openplatform.showcase.security.service.SearchIndexClient:searchIndex"
